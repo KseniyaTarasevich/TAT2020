@@ -23,6 +23,8 @@ namespace TaskDEV1TestProject
         [DataRow("'\u00a7'", 1)]
         [DataRow("\t", 1)]
         [DataRow("abababab", 1)]
+        [DataRow("asd\t\thj", 2)]
+        [DataRow("1234555", 3)]
         public void DifferentSequences(string example, int expected)
         {
             SymbolsSelector selector = new SymbolsSelector();
