@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TaskDev1
+namespace TaskDev1_1
 {
     /// <summary>
     /// Class for working with console
@@ -25,8 +25,8 @@ namespace TaskDev1
        public void ConsoleOutput()
         {
             int answer;
-            answer = selector.MaximumIdenticalSymbols(consoleString);
-            Console.Write("Maximum number of identical consecutive symbols: ");
+            answer = selector.MaximumDifferentSymbols(consoleString);
+            Console.Write("Maximum number of different consecutive symbols: ");
             Console.Write(answer);
         }
     }

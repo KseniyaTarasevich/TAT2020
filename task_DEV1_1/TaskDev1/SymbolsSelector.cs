@@ -1,17 +1,17 @@
 ﻿
-namespace TaskDev1
+namespace TaskDev1_1
 {
     /// <summary>
-    /// Class for calculating maximum number of identical consecutive symbols
+    /// Class for calculating maximum number of different consecutive symbols
     /// </summary>
     public class SymbolsSelector
     {
         /// <summary>
-        /// Calculates number of identical consecutive symbols
+        /// Calculates number of different consecutive symbols
         /// </summary>
         /// <param Input string = "consoleString"></param>
-        /// <returns>Maximum number of identical consecutive symbols</returns>
-        public int MaximumIdenticalSymbols(string consoleString)
+        /// <returns>Maximum number of different consecutive symbols</returns>
+        public int MaximumDifferentSymbols(string consoleString)
         {
             int maxCount = 1;
             int currentCount = 1;
@@ -23,7 +23,7 @@ namespace TaskDev1
 
             for (int i = 1; i < consoleString.Length; i++)
             {
-                if (consoleString[i] == consoleString[i - 1])
+                if (consoleString[i] != consoleString[i - 1])
                 {
                     currentCount++;
                 }

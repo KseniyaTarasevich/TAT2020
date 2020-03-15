@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TaskDev1
+namespace TaskDev1_1
 {
     class EntryPoint
     {
