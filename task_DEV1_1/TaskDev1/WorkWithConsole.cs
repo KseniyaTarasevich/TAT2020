@@ -8,7 +8,7 @@ namespace TaskDev1_1
     public class WorkWithConsole
     {
         string consoleString;
-        SymbolsSelector selector = new SymbolsSelector();
+        SelectorOfMaximumDifferentSymbols selector = new SelectorOfMaximumDifferentSymbols();
 
         /// <summary>
         /// Method for input user string
@@ -19,13 +19,13 @@ namespace TaskDev1_1
             consoleString = Console.ReadLine();
         }
 
-       /// <summary>
-       /// Method for output answer to console
-       /// </summary>
-       public void ConsoleOutput()
+        /// <summary>
+        /// Method for output answer to console
+        /// </summary>
+        public void ConsoleOutput()
         {
             int answer;
-            answer = selector.MaximumDifferentSymbols(consoleString);
+            answer = selector.MaximumNumberOfDifferentSymbols(consoleString);
             Console.Write("Maximum number of different consecutive symbols: ");
             Console.Write(answer);
         }

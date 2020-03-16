@@ -29,8 +29,8 @@ namespace TaskDEV1_1TestProject
         [DataRow("   asd", 4)]
         public void DifferentSequences(string example, int expected)
         {
-            SymbolsSelector selector = new SymbolsSelector();
-            int actual = selector.MaximumDifferentSymbols(example);
+            SelectorOfMaximumDifferentSymbols selector = new SelectorOfMaximumDifferentSymbols();
+            int actual = selector.MaximumNumberOfDifferentSymbols(example);
             Assert.AreEqual(actual, expected);
         }
 
@@ -38,8 +38,8 @@ namespace TaskDEV1_1TestProject
         [ExpectedException(typeof(NullReferenceException))]
         public void NullExeption()
         {
-            SymbolsSelector selector = new SymbolsSelector();
-            selector.MaximumDifferentSymbols(null);
+            SelectorOfMaximumDifferentSymbols selector = new SelectorOfMaximumDifferentSymbols();
+            selector.MaximumNumberOfDifferentSymbols(null);
         }
     }
 }

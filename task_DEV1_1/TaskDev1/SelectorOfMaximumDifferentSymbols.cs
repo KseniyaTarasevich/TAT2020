@@ -1,20 +1,24 @@
-﻿
-namespace TaskDev1_1
+﻿namespace TaskDev1_1
 {
     /// <summary>
     /// Class for calculating maximum number of different consecutive symbols
     /// </summary>
-    public class SymbolsSelector
+    public class SelectorOfMaximumDifferentSymbols
     {
         /// <summary>
         /// Calculates number of different consecutive symbols
         /// </summary>
         /// <param Input string = "consoleString"></param>
         /// <returns>Maximum number of different consecutive symbols</returns>
-        public int MaximumDifferentSymbols(string consoleString)
+        public int MaximumNumberOfDifferentSymbols(string consoleString)
         {
             int maxCount = 1;
             int currentCount = 1;
+
+            if (consoleString == null)
+            {
+                throw new System.NullReferenceException("Console string must be initialized");
+            }
 
             if (consoleString.Length <= 1)
             {
@@ -37,13 +41,7 @@ namespace TaskDev1_1
                     currentCount = 1;
                 }
             }
-
-            if (maxCount > currentCount)
-            {
-                return maxCount;
-            }
-
-            else return currentCount;
+            return maxCount > currentCount ? maxCount : currentCount;
         }
     }
 }

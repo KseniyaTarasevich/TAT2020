@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SymbolsSelector.cs" />
+    <Compile Include="SelectorOfMaximumDifferentSymbols.cs" />
     <Compile Include="WorkWithConsole.cs" />
   </ItemGroup>
   <ItemGroup>
