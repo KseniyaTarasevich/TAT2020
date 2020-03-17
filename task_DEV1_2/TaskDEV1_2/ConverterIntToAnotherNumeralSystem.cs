@@ -21,14 +21,15 @@ namespace TaskDEV1_2
                 throw new ArgumentOutOfRangeException("Base of new system must be between 2 and 20");
             }
 
-            if (Convert.ToInt32(consoleNumber) < Int32.MinValue || Convert.ToInt32(consoleNumber) > Int32.MaxValue)
+            if (Convert.ToInt32(consoleNumber) < Int32.MinValue || Convert.ToInt32(consoleNumber) > Int32.MaxValue ||
+                Convert.ToInt32(consoleSystemBase) < Int32.MinValue || Convert.ToInt32(consoleSystemBase) > Int32.MaxValue)
             {
-                throw new OutOfMemoryException("Entered number must be bigger than Int32.MinValue and smaller than Int32.MaxValue");
+                throw new OverflowException("Entered number must be bigger than Int32.MinValue and smaller than Int32.MaxValue");
             }
 
             if (consoleNumber == null || consoleNumber == string.Empty || consoleSystemBase == null || consoleSystemBase == string.Empty)
             {
-                throw new Exception("Invalid values of number or base of a system");
+                throw new FormatException("Invalid values of number or base of a system");
             }
 
             if (Convert.ToInt32(consoleNumber) < 0)
