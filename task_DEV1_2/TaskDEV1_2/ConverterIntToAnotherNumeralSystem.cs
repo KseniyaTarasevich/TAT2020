@@ -3,8 +3,17 @@ using System.Collections;
 
 namespace TaskDEV1_2
 {
+    /// <summary>
+    /// Class for converting numbers
+    /// </summary>
     public class ConverterIntToAnotherNumeralSystem
     {
+        /// <summary>
+        /// Method for converting numbers in decimal system to another base systems
+        /// </summary>
+        /// <param Convertible number = "consoleNumber"></param>
+        /// <param base of a new system = "consoleSystemBase"></param>
+        /// <returns>Number in new numeral system as a string</returns>
         public string ConvertToAnotherNumeralSystem(string consoleNumber, string consoleSystemBase)
         {
             if (Convert.ToInt32(consoleSystemBase) < 2 || Convert.ToInt32(consoleSystemBase) > 20)
@@ -52,13 +61,18 @@ namespace TaskDEV1_2
 
             for (int i = newNumberByDigits.Count - 1; i >= 0; i--)
             {
-                numberInNewSystem += GetLettersInNewNumeralSystem(newNumberByDigits[i].ToString());
+                numberInNewSystem += GetLetterInNewNumeralSystem(newNumberByDigits[i].ToString());
             }
 
             return numberInNewSystem;
         }
 
-        public string GetLettersInNewNumeralSystem(string elementOfNewNumber)
+        /// <summary>
+        /// Method for converting number when base of new system more than 10
+        /// </summary>
+        /// <param One digit of the number = "elementOfNewNumber"></param>
+        /// <returns>Number in another system with letters</returns>
+        public string GetLetterInNewNumeralSystem(string elementOfNewNumber)
         {
             string lettersForNumberInAnotherSystem = "ABCDEFGHIJ";
             string newNumberWithLetters = string.Empty;
