@@ -8,6 +8,10 @@ namespace TaskDEV1_2
     /// </summary>
     public class ConverterIntToAnotherNumeralSystem
     {
+        private const int _minSystemBase = 2;
+        private const int _maxSystemBase = 20;
+        private const string _lettersForNumberInAnotherSystem = "ABCDEFGHIJ";
+
         /// <summary>
         /// Method for converting numbers in decimal system to another base systems
         /// </summary>
@@ -16,7 +20,7 @@ namespace TaskDEV1_2
         /// <returns>Number in new numeral system as a string</returns>
         public string ConvertToAnotherNumeralSystem(string consoleNumber, string consoleSystemBase)
         {
-            if (Convert.ToInt32(consoleSystemBase) < 2 || Convert.ToInt32(consoleSystemBase) > 20)
+            if (Convert.ToInt32(consoleSystemBase) < _minSystemBase || Convert.ToInt32(consoleSystemBase) > _maxSystemBase)
             {
                 throw new ArgumentOutOfRangeException("Base of new system must be between 2 and 20");
             }
@@ -75,13 +79,11 @@ namespace TaskDEV1_2
         /// <returns>Number in another system with letters</returns>
         public string GetLetterInNewNumeralSystem(string elementOfNewNumber)
         {
-            string lettersForNumberInAnotherSystem = "ABCDEFGHIJ";
             string newNumberWithLetters = string.Empty;
-
 
             if (Convert.ToInt32(elementOfNewNumber) >= 10)
             {
-                newNumberWithLetters += lettersForNumberInAnotherSystem.Substring(Convert.ToInt32(elementOfNewNumber) - 10, 1);
+                newNumberWithLetters += _lettersForNumberInAnotherSystem.Substring(Convert.ToInt32(elementOfNewNumber) - 10, 1);
                 return newNumberWithLetters;
             }
 
