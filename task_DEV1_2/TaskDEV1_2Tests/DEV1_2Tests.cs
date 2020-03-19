@@ -48,7 +48,6 @@ namespace TaskDEV1_2Tests
         [DataRow("0", "3", "0")]
         [DataRow("100", "2", "1100100")]
         [DataRow("100", "10", "100")]
-        [DataRow("1000", "20", "2A0")]
         [DataRow("1000", "15", "46A")]
         [DataRow("191815", "20", "13JAF")]
         [DataRow("400", "17", "169")]

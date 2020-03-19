@@ -22,7 +22,7 @@ namespace TaskDEV1_2
         {
             if (Convert.ToInt32(consoleSystemBase) < _minSystemBase || Convert.ToInt32(consoleSystemBase) > _maxSystemBase)
             {
-                throw new ArgumentOutOfRangeException("Base of new system must be between 2 and 20");
+                throw new ArgumentOutOfRangeException("Base of new system must be between _minSystemBase  and _maxSystemBase");
             }
 
             if (Convert.ToInt32(consoleNumber) < Int32.MinValue || Convert.ToInt32(consoleNumber) > Int32.MaxValue ||
