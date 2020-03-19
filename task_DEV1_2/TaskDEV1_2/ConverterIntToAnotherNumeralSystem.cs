@@ -87,10 +87,8 @@ namespace TaskDEV1_2
                 return newNumberWithLetters;
             }
 
-            else
-            {
-                return elementOfNewNumber;
-            }
+            return elementOfNewNumber;
         }
     }
 }
+
