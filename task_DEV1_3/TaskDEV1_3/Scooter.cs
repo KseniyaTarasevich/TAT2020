@@ -16,7 +16,7 @@ namespace TaskDEV1_3
         /// <param name="transmission"></param>
         public Scooter(string scooterColor, Engine engine, Chassis chassis, Transmission transmission) : base(engine, chassis, transmission, _vehicleType)
         {
-            scooterColor = _scooterColor;
+            ScooterColor = scooterColor;
         }
 
         public string ScooterColor

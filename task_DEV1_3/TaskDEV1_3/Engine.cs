@@ -12,9 +12,9 @@ namespace TaskDEV1_3
         private string _engineType;
         private string _engineSerialNumber;
         private const float _MIN_ENGINE_POWER = 0.1f;
-        private const float _MAX_ENGINE_POWER = 500f;
-        private const float _MIN_ENGINE_VOLUME = 10f;
-        private const float _MAX_ENGINE_VOLUME = 15000f;
+        private const float _MAX_ENGINE_POWER = 500;
+        private const float _MIN_ENGINE_VOLUME = 10;
+        private const float _MAX_ENGINE_VOLUME = 15000;
 
        /// <summary>
        /// 

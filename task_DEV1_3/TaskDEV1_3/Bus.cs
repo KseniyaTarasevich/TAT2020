@@ -8,7 +8,7 @@ namespace TaskDEV1_3
         private const int _MIN_PASSENGERS_COUNT = 0;
         private const int _MAX_PASSENGERS_COUNT = 300;
         private const string _vehicleType = "Bus";
-
+       
         /// <summary>
         /// 
         /// </summary>
@@ -16,9 +16,11 @@ namespace TaskDEV1_3
         /// <param name="engine"></param>
         /// <param name="chassis"></param>
         /// <param name="transmission"></param>
-        public Bus(float passengersCount, Engine engine, Chassis chassis, Transmission transmission) : base(engine, chassis, transmission, _vehicleType)
+
+
+        public Bus(int passengersCount, Engine engine, Chassis chassis, Transmission transmission) : base(engine, chassis, transmission, _vehicleType)
         {
-            passengersCount = _passengersCount;
+            PassengersCount = passengersCount;
         }
 
         public int PassengersCount

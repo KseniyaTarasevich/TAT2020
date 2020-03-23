@@ -12,10 +12,10 @@ namespace TaskDEV1_3
 
         public PassengerCar(int seatsNumber, string carBrand, Engine engine, Chassis chassis, Transmission transmission) : base (engine, chassis, transmission, _vehicleType)
         {
-            carBrand = _carBrand;
-            seatsNumber = _seatsNumber;
+            CarBrand = carBrand;
+            SeatsNumber = seatsNumber;
         }
-        public int seatsNumber
+        public int SeatsNumber
         {
             get
             {
@@ -37,7 +37,7 @@ namespace TaskDEV1_3
             return value;
         }
 
-        public string carBrand
+        public string CarBrand
         {
             get
             {

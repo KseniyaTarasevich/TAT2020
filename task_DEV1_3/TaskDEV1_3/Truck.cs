@@ -18,7 +18,7 @@ namespace TaskDEV1_3
         /// <param name="transmission"></param>
         public Truck(float carryingCapacity, Engine engine, Chassis chassis, Transmission transmission) : base(engine, chassis, transmission, _vehicleType)
         {
-            carryingCapacity = _carryingCapacity;
+            CarryingCapacity = carryingCapacity;
         }
 
         public float CarryingCapacity

@@ -3,7 +3,7 @@
 namespace TaskDEV1_3
 {
     /// <summary>
-    /// 
+    /// Class for definition of transmission
     /// </summary>
     public class Transmission
     {
@@ -135,9 +135,9 @@ namespace TaskDEV1_3
         {
             foreach (char c in value)
             {
-                if (!Char.IsLetterOrDigit(c))
+                if (!Char.IsLetter(c))
                 {
-                    throw new ArgumentException("Transmission manufacturer must contain only digits or letters");
+                    throw new ArgumentException("Transmission manufacturer must contain only letters");
                 }
             }
             return value;
