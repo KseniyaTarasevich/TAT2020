@@ -2,10 +2,10 @@
 
 namespace TaskDEV1_3
 {
-   /// <summary>
-   /// 
-   /// </summary>
-   public class Engine
+    /// <summary>
+    /// Class for definition of Engine
+    /// </summary>
+    public class Engine
     {
         private float _enginePower;
         private float _engineVolume;
@@ -16,14 +16,14 @@ namespace TaskDEV1_3
         private const float _MIN_ENGINE_VOLUME = 10;
         private const float _MAX_ENGINE_VOLUME = 15000;
 
-       /// <summary>
-       /// 
-       /// </summary>
-       /// <param name="power"></param>
-       /// <param name="volume"></param>
-       /// <param name="type"></param>
-       /// <param name="serialNumber"></param>
-       public Engine(float power, float volume, string type, string serialNumber)
+        /// <summary>
+        /// Constructor for Engine
+        /// </summary>
+        /// <param Power = "power"></param>
+        /// <param Volume = "volume"></param>
+        /// <param Engine type = "type"></param>
+        /// <param Engine serial number = "serialNumber"></param>
+        public Engine(float power, float volume, string type, string serialNumber)
         {
             EnginePower = power;
             EngineVolume = volume;
@@ -40,7 +40,6 @@ namespace TaskDEV1_3
             {
                 EnginePowerCheckValue(value);
                 _enginePower = value;
-
             }
         }
 
@@ -54,7 +53,6 @@ namespace TaskDEV1_3
             {
                 EngineVolumeCheckValue(value);
                 _engineVolume = value;
-
             }
         }
 
@@ -69,7 +67,6 @@ namespace TaskDEV1_3
                 EngineTypeCheckValueNullOrEmpty(value);
                 EngineTypeCheckValueDigitsOrLetters(value);
                 _engineType = value;
-
             }
         }
 
@@ -84,16 +81,15 @@ namespace TaskDEV1_3
                 EngineSerialNumberCheckValueNullOrEmpty(value);
                 EngineSerialNumberCheckValueDigitsOrLetters(value);
                 _engineSerialNumber = value;
-
             }
         }
 
-       /// <summary>
-       /// 
-       /// </summary>
-       /// <param name="value"></param>
-       /// <returns></returns>
-       private float EnginePowerCheckValue(float value)
+        /// <summary>
+        /// Method for checking engine power
+        /// </summary>
+        /// <param Engine power = "value"></param>
+        /// <returns>Engine power</returns>
+        private float EnginePowerCheckValue(float value)
         {
             if (value < _MIN_ENGINE_POWER || value > _MAX_ENGINE_POWER)
             {
@@ -103,10 +99,10 @@ namespace TaskDEV1_3
         }
 
         /// <summary>
-        /// 
+        /// Method for checking engine volume
         /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
+        /// <param Engine volume = "value"></param>
+        /// <returns>Engine volume</returns>
         private float EngineVolumeCheckValue(float value)
         {
             if (value < _MIN_ENGINE_VOLUME || value > _MAX_ENGINE_VOLUME)
@@ -117,10 +113,10 @@ namespace TaskDEV1_3
         }
 
         /// <summary>
-        /// 
+        ///  Method for checking engine type is NULL or empty
         /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
+        /// <param Engine type="value"></param>
+        /// <returns>Engine type</returns>
         private string EngineTypeCheckValueNullOrEmpty(string value)
         {
             if (value == null || value == string.Empty)
@@ -131,10 +127,10 @@ namespace TaskDEV1_3
         }
 
         /// <summary>
-        /// 
+        ///  Method for checking serial number is NULL or empty
         /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
+        /// <param Serial number = "value"></param>
+        /// <returns>Serial number</returns>
         private string EngineSerialNumberCheckValueNullOrEmpty(string value)
         {
             if (value == null || value == string.Empty)
@@ -145,20 +141,10 @@ namespace TaskDEV1_3
         }
 
         /// <summary>
-        /// 
+        /// Method for checking engine type for digits and letters
         /// </summary>
-        /// <returns></returns>
-        public string GetInfo()
-        {
-            return "\n\tInformation about Engine: \n\nPower: " + EnginePower + "\nVolume: " + EngineVolume 
-                + "\nType: " + EngineType + "\nSerial number: " + EngineSerialNumber + "\n";
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
+        /// <param Engine type = "value"></param>
+        /// <returns>Engine type</returns>
         private string EngineTypeCheckValueDigitsOrLetters(string value)
         {
             foreach (char c in value)
@@ -172,10 +158,10 @@ namespace TaskDEV1_3
         }
 
         /// <summary>
-        /// 
+        /// Method for checking serial number for digits and letters
         /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
+        /// <param Serial number = "value"></param>
+        /// <returns>Serial number</returns>
         private string EngineSerialNumberCheckValueDigitsOrLetters(string value)
         {
             foreach (char c in value)
@@ -186,6 +172,16 @@ namespace TaskDEV1_3
                 }
             }
             return value;
+        }
+
+        /// <summary>
+        /// Method for getting infromation about Engine
+        /// </summary>
+        /// <returns>Information about Engine as a string</returns>
+        public string GetInfo()
+        {
+            return "\n\tInformation about Engine: \n\nPower: " + EnginePower + " watt\nVolume: " + EngineVolume
+                + " cubic centimeter\nType: " + EngineType + "\nSerial number: " + EngineSerialNumber + "\n";
         }
     }
 }

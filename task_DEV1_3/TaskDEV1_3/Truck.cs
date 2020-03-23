@@ -2,6 +2,9 @@
 
 namespace TaskDEV1_3
 {
+    /// <summary>
+    /// Class for defiition of truck
+    /// </summary>
     public class Truck : Vehicle
     {
         private float _carryingCapacity;
@@ -10,12 +13,12 @@ namespace TaskDEV1_3
         private const float _MAX_CARRYING_CAPACITY = 100000;
 
         /// <summary>
-        /// 
+        /// Constructor for Truck
         /// </summary>
-        /// <param name="carryingCapacity"></param>
-        /// <param name="engine"></param>
-        /// <param name="chassis"></param>
-        /// <param name="transmission"></param>
+        /// <param Carrying capacity = "carryingCapacity"></param>
+        /// <param Engine = "engine"></param>
+        /// <param Chassis ="chassis"></param>
+        /// <param Transmission = "transmission"></param>
         public Truck(float carryingCapacity, Engine engine, Chassis chassis, Transmission transmission) : base(engine, chassis, transmission, _vehicleType)
         {
             CarryingCapacity = carryingCapacity;
@@ -35,10 +38,10 @@ namespace TaskDEV1_3
         }
 
         /// <summary>
-        /// 
+        /// Method for checking carrying capacity
         /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
+        /// <param Carrying capacity = "value"></param>
+        /// <returns>Carrying capacity</returns>
         private float TruckCarryingCapacityCheckValue(float value)
         {
             if (value < _MIN_CARRYING_CAPACITY || value > _MAX_CARRYING_CAPACITY)
@@ -48,14 +51,13 @@ namespace TaskDEV1_3
             return value;
         }
 
-       /// <summary>
-       /// 
-       /// </summary>
-       /// <returns></returns>
-       new public string GetInfo()
+        /// <summary>
+        /// Method for getting infromation about Truck
+        /// </summary>
+        /// <returns>Infromation about Truck as a string</returns>
+        new public string GetInfo()
         {
             return base.GetInfo() + "Carrying capacity" + _carryingCapacity + "\n";
         }
-
     }
 }

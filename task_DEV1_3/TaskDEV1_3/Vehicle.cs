@@ -3,7 +3,7 @@
 namespace TaskDEV1_3
 {
     /// <summary>
-    /// 
+    /// Class for definition of vehicle
     /// </summary>
     public abstract class Vehicle
     {
@@ -14,12 +14,12 @@ namespace TaskDEV1_3
         private string _vehicleType;
 
         /// <summary>
-        /// 
+        /// Constructor for Vehicle
         /// </summary>
-        /// <param name="engine"></param>
-        /// <param name="chassis"></param>
-        /// <param name="transmission"></param>
-        /// <param name="vehicleType"></param>
+        /// <param Engine = "engine"></param>
+        /// <param Chassis = "chassis"></param>
+        /// <param Transmission = "transmission"></param>
+        /// <param Type of the vehicle = "vehicleType"></param>
         public Vehicle(Engine engine, Chassis chassis, Transmission transmission, string vehicleType)
         {
             _engine = engine;
@@ -28,7 +28,7 @@ namespace TaskDEV1_3
             _vehicleType = vehicleType;
         }
 
-        public string VehicleType 
+        public string VehicleType
         {
             get
             {
@@ -37,16 +37,17 @@ namespace TaskDEV1_3
             set
             {
                 VehicleTypeCheckNullOrEmpty(value);
+                VehicleTypeCheckValueDigitsOrLetters(value);
                 _vehicleType = value; ;
             }
         }
 
-       /// <summary>
-       /// 
-       /// </summary>
-       /// <param name="value"></param>
-       /// <returns></returns>
-       private string VehicleTypeCheckNullOrEmpty(string value)
+        /// <summary>
+        /// Method for checking type of the vehicle is NULL or empty
+        /// </summary>
+        /// <param Type of the vehicle="value"></param>
+        /// <returns>Type of the vehicle</returns>
+        private string VehicleTypeCheckNullOrEmpty(string value)
         {
             if (value == null || value == string.Empty)
             {
@@ -56,10 +57,10 @@ namespace TaskDEV1_3
         }
 
         /// <summary>
-        /// 
+        /// Method for checking type of the vehicle for digits and letters
         /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
+        /// <param Type of the vehicle="value"></param>
+        /// <returns>Type of the vehicle</returns>
         private string VehicleTypeCheckValueDigitsOrLetters(string value)
         {
             foreach (char c in value)
@@ -73,14 +74,12 @@ namespace TaskDEV1_3
         }
 
         /// <summary>
-        /// 
+        /// Method for getting infromation about Vehicle
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Infromation about Vehicle as a string</returns>
         public string GetInfo()
         {
-            return "\n\tVehicle Type: " + _vehicleType + "\n" + _engine.GetInfo() + _chassis.GetInfo() + _transmission.GetInfo() ;
+            return "\n\tVehicle Type: " + _vehicleType + "\n" + _engine.GetInfo() + _chassis.GetInfo() + _transmission.GetInfo();
         }
     }
 }
-
-

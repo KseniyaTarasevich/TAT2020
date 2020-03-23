@@ -2,22 +2,23 @@
 
 namespace TaskDEV1_3
 {
+    /// <summary>
+    /// Class for definition of bus
+    /// </summary>
     public class Bus : Vehicle
     {
         private int _passengersCount;
         private const int _MIN_PASSENGERS_COUNT = 0;
         private const int _MAX_PASSENGERS_COUNT = 300;
         private const string _vehicleType = "Bus";
-       
+
         /// <summary>
-        /// 
+        /// Constructor for Bus
         /// </summary>
-        /// <param name="passengersCount"></param>
-        /// <param name="engine"></param>
-        /// <param name="chassis"></param>
-        /// <param name="transmission"></param>
-
-
+        /// <param Passengers count = "passengersCount"></param>
+        /// <param Engine = "engine"></param>
+        /// <param Chassis = "chassis"></param>
+        /// <param Transmission = "transmission"></param>
         public Bus(int passengersCount, Engine engine, Chassis chassis, Transmission transmission) : base(engine, chassis, transmission, _vehicleType)
         {
             PassengersCount = passengersCount;
@@ -37,10 +38,10 @@ namespace TaskDEV1_3
         }
 
         /// <summary>
-        /// 
+        /// Method for checking passengers count
         /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
+        /// <param Passengers count = "value"></param>
+        /// <returns>Passengers count</returns>
         private int BusPassengersCountCheckValue(int value)
         {
             if (value < _MIN_PASSENGERS_COUNT || value > _MAX_PASSENGERS_COUNT)
@@ -50,13 +51,12 @@ namespace TaskDEV1_3
             return value;
         }
         /// <summary>
-        /// 
+        /// Method for getting infromation about Bus
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Infromation about Bus as a string</returns>
         new public string GetInfo()
         {
             return base.GetInfo() + "Passengers count: " + _passengersCount + "\n";
         }
-
     }
 }

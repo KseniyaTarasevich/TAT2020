@@ -14,11 +14,11 @@ namespace TaskDEV1_3
         private const int _MAX_GEARS_NUMBER = 10;
 
         /// <summary>
-        /// 
+        /// Constructor for Transmission
         /// </summary>
-        /// <param name="type"></param>
-        /// <param name="gearsNumber"></param>
-        /// <param name="manufacturer"></param>
+        /// <param Type of transmission = "type"></param>
+        /// <param Number of gears = "gearsNumber"></param>
+        /// <param Manufacturer = "manufacturer"></param>
         public Transmission(string type, int gearsNumber, string manufacturer)
         {
             TransmissionType = type;
@@ -40,12 +40,12 @@ namespace TaskDEV1_3
             }
         }
 
-       /// <summary>
-       /// 
-       /// </summary>
-       /// <param name="value"></param>
-       /// <returns></returns>
-       private string TransmissionTypeCheckValueNullOrEmpty(string value)
+        /// <summary>
+        /// Method for checking type of transmission is NULL or empty
+        /// </summary>
+        /// <param Type of transmission = "value"></param>
+        /// <returns>Type of transmission</returns>
+        private string TransmissionTypeCheckValueNullOrEmpty(string value)
         {
             if (value == null || value == string.Empty)
             {
@@ -55,10 +55,10 @@ namespace TaskDEV1_3
         }
 
         /// <summary>
-        /// 
+        /// Method for checking type of transmission for digits and letters
         /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
+        /// <param Type of transmission = "value"></param>
+        /// <returns>Type of transmission</returns>
         private string TransmissionTypeCheckValueDigitsOrLetters(string value)
         {
             foreach (char c in value)
@@ -85,10 +85,10 @@ namespace TaskDEV1_3
         }
 
         /// <summary>
-        /// 
+        /// Method for checking number of gears 
         /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
+        /// <param Number of gears = "value"></param>
+        /// <returns>Number of gears</returns>
         private int TransmissionGearsNumberCheckValue(int value)
         {
             if (value < _MIN_GEARS_NUMBER || value > _MAX_GEARS_NUMBER)
@@ -112,12 +112,12 @@ namespace TaskDEV1_3
             }
         }
 
-       /// <summary>
-       /// 
-       /// </summary>
-       /// <param name="value"></param>
-       /// <returns></returns>
-       private string TransmissionManufacturerCheckValueNullOrEmpty(string value)
+        /// <summary>
+        /// Method for checking manufacturer is NULL or empty
+        /// </summary>
+        /// <param Manufacturer = "value"></param>
+        /// <returns>Manufacturer</returns>
+        private string TransmissionManufacturerCheckValueNullOrEmpty(string value)
         {
             if (value == null || value == string.Empty)
             {
@@ -127,10 +127,10 @@ namespace TaskDEV1_3
         }
 
         /// <summary>
-        /// 
+        /// Method for checking manufacturer for digits and letters
         /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
+        /// <param Manufacturer="value"></param>
+        /// <returns>Manufacturer</returns>
         private string TransmissionManufacturerCheckValueDigitsOrLetters(string value)
         {
             foreach (char c in value)
@@ -144,9 +144,9 @@ namespace TaskDEV1_3
         }
 
         /// <summary>
-        /// 
+        /// Method for getting infromation about Transmission
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Information about Transmission as a string</returns>
         public string GetInfo()
         {
             return "\n\tInformation about Transmission: \n\nType: " + TransmissionType + "\nNumber of Gears: " + TransmissionGearsNumber

@@ -3,7 +3,7 @@
 namespace TaskDEV1_3
 {
     /// <summary>
-    /// 
+    /// Class for definition of Chassis
     /// </summary>
     public class Chassis
     {
@@ -17,13 +17,12 @@ namespace TaskDEV1_3
         private const int _MIN_WHEEL_NUMBER = 1;
         private const int _MAX_WHEEL_NUMBER = 20;
 
-
         /// <summary>
-        /// 
+        /// Constructor for Chassis
         /// </summary>
-        /// <param name="wheelNumber"></param>
-        /// <param name="count"></param>
-        /// <param name="permissibleLoad"></param>
+        /// <param Number of wheel = "wheelNumber"></param>
+        /// <param Chassis count = "count"></param>
+        /// <param Permissible load = "permissibleLoad"></param>
         public Chassis(int wheelNumber, int count, float permissibleLoad)
         {
             ChassisWheelNumber = wheelNumber;
@@ -44,12 +43,12 @@ namespace TaskDEV1_3
             }
         }
 
-       /// <summary>
-       /// 
-       /// </summary>
-       /// <param name="value"></param>
-       /// <returns></returns>
-       private int ChassisWheelNumberCheckValue(int value)
+        /// <summary>
+        /// Method for checking number of wheel
+        /// </summary>
+        /// <param Number of wheel = "value"></param>
+        /// <returns>Number of wheel</returns>
+        private int ChassisWheelNumberCheckValue(int value)
         {
             if (value < _MIN_WHEEL_NUMBER || value > _MAX_WHEEL_NUMBER)
             {
@@ -72,12 +71,12 @@ namespace TaskDEV1_3
             }
         }
 
-       /// <summary>
-       /// 
-       /// </summary>
-       /// <param name="value"></param>
-       /// <returns></returns>
-       private int ChassisCountCheckValue(int value)
+        /// <summary>
+        /// Method for checking chassis count
+        /// </summary>
+        /// <param Chassis count = "value"></param>
+        /// <returns>Chassis count</returns>
+        private int ChassisCountCheckValue(int value)
         {
             if (value < _MIN_CHASSIS_COUNT || value > _MAX_CHASSIS_COUNT)
             {
@@ -101,10 +100,10 @@ namespace TaskDEV1_3
         }
 
         /// <summary>
-        /// 
+        /// Method for checking permissible load
         /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
+        /// <param Permissible load = "value"></param>
+        /// <returns>Permissible load</returns>
         private float ChassisPermissibleLoadCheckValue(float value)
         {
             if (value < _MIN__CHASSIS_PERMISSIBLE_LOAD || value > _MAX__CHASSIS_PERMISSIBLE_LOAD)
@@ -115,13 +114,13 @@ namespace TaskDEV1_3
         }
 
         /// <summary>
-        /// 
+        /// Method for getting infromation about Chassis
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Information about Chassis as a string</returns>
         public string GetInfo()
         {
             return "\n\tInformation about Chassis: \n\nWheel Number: " + ChassisWheelNumber + "\nCount: " + ChassisCount
-                + "\nPermissible load: " + ChassisPermissibleLoad + "\n";
+                + "\nPermissible load: " + ChassisPermissibleLoad + " kg\n";
         }
     }
 }

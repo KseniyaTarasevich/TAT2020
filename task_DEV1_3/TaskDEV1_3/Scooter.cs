@@ -2,18 +2,21 @@
 
 namespace TaskDEV1_3
 {
+    /// <summary>
+    /// Class for definition of scooter
+    /// </summary>
     public class Scooter : Vehicle
     {
         private string _scooterColor;
         private const string _vehicleType = "Scooter";
 
         /// <summary>
-        /// 
+        /// Constructor for Scooter
         /// </summary>
-        /// <param name="scooterColor"></param>
-        /// <param name="engine"></param>
-        /// <param name="chassis"></param>
-        /// <param name="transmission"></param>
+        /// <param Scooter color = "scooterColor"></param>
+        /// <param Engine = "engine"></param>
+        /// <param Chassis = "chassis"></param>
+        /// <param Transmission = "transmission"></param>
         public Scooter(string scooterColor, Engine engine, Chassis chassis, Transmission transmission) : base(engine, chassis, transmission, _vehicleType)
         {
             ScooterColor = scooterColor;
@@ -33,13 +36,12 @@ namespace TaskDEV1_3
             }
         }
 
-
-       /// <summary>
-       /// 
-       /// </summary>
-       /// <param name="value"></param>
-       /// <returns></returns>
-       private string ScooterColorCheckValueNullOrEmpty(string value)
+        /// <summary>
+        /// Method for checking scooter color is NULL or empty
+        /// </summary>
+        /// <param Scooter color = "value"></param>
+        /// <returns></returns>
+        private string ScooterColorCheckValueNullOrEmpty(string value)
         {
             if (value == null || value == string.Empty)
             {
@@ -48,13 +50,12 @@ namespace TaskDEV1_3
             return value;
         }
 
-      
-       /// <summary>
-       /// 
-       /// </summary>
-       /// <param name="value"></param>
-       /// <returns></returns>
-       private string ScooterColorCheckValueDigitsOrLetters(string value)
+        /// <summary>
+        /// Method for checking scooter color for digits and letters
+        /// </summary>
+        /// <param Scooter color = "value"></param>
+        /// <returns></returns>
+        private string ScooterColorCheckValueDigitsOrLetters(string value)
         {
             foreach (char c in value)
             {
@@ -67,13 +68,12 @@ namespace TaskDEV1_3
         }
 
         /// <summary>
-        /// 
+        /// Method for getting infromation about Scooter
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Infromation about Scooter as a string</returns>
         new public string GetInfo()
         {
             return base.GetInfo() + "Scooter color: " + _scooterColor + "\n";
         }
-
     }
 }

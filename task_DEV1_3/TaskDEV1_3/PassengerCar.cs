@@ -2,6 +2,9 @@
 
 namespace TaskDEV1_3
 {
+    /// <summary>
+    /// Class for definition of passenger car
+    /// </summary>
     public class PassengerCar : Vehicle
     {
         private string _carBrand;
@@ -10,7 +13,15 @@ namespace TaskDEV1_3
         private const int _MIN_SEATS_NUMBER = 2;
         private const int _MAX_SEATS_NUMBER = 4;
 
-        public PassengerCar(int seatsNumber, string carBrand, Engine engine, Chassis chassis, Transmission transmission) : base (engine, chassis, transmission, _vehicleType)
+        /// <summary>
+        /// Constructor for PassengerCar
+        /// </summary>
+        /// <param Number of seats = "seatsNumber"></param>
+        /// <param Car brand = "carBrand"></param>
+        /// <param Engine = "engine"></param>
+        /// <param Chassis = "chassis"></param>
+        /// <param Transmission = "transmission"></param>
+        public PassengerCar(int seatsNumber, string carBrand, Engine engine, Chassis chassis, Transmission transmission) : base(engine, chassis, transmission, _vehicleType)
         {
             CarBrand = carBrand;
             SeatsNumber = seatsNumber;
@@ -28,6 +39,11 @@ namespace TaskDEV1_3
             }
         }
 
+        /// <summary>
+        /// Method for checking number of seats
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns>Number of seats</returns>
         private int CarSeatsNumberCheckValue(int value)
         {
             if (value < _MIN_SEATS_NUMBER || value > _MAX_SEATS_NUMBER)
@@ -52,10 +68,10 @@ namespace TaskDEV1_3
         }
 
         /// <summary>
-        /// 
+        /// Method for checking car brand is NULL or empty
         /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
+        /// <param Car brand = "value"></param>
+        /// <returns>Car brand</returns>
         private string CarBrandCheckValueNullOrEmpty(string value)
         {
             if (value == null || value == string.Empty)
@@ -66,13 +82,13 @@ namespace TaskDEV1_3
         }
 
         /// <summary>
-        /// 
+        /// Method for checking car brand for digits and letters
         /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
+        /// <param Car brand = "value"></param>
+        /// <returns>Car brand</returns>
         private string CarBrandCheckValueDigitsOrLetters(string value)
         {
-            foreach(char c in value)
+            foreach (char c in value)
             {
                 if (!Char.IsLetterOrDigit(c))
                 {
@@ -82,15 +98,13 @@ namespace TaskDEV1_3
             return value;
         }
 
-       /// <summary>
-       /// 
-       /// </summary>
-       /// <returns></returns>
-       new public string GetInfo()
+        /// <summary>
+        /// Method for getting infromation about PassengerCar
+        /// </summary>
+        /// <returns>Information about PassengerCar as a string</returns>
+        new public string GetInfo()
         {
             return base.GetInfo() + "Number of seats: " + _seatsNumber + "\nBrand: " + _carBrand + "\n";
         }
-
     }
 }
-
