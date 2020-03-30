@@ -3,6 +3,6 @@
     interface IFlyable
     {
         void FlyTo(Coordinate newCoordinate);
-        float GetFlyTime(Coordinate CurrentCoordinate, Coordinate newCoordinate);
+        int GetFlyTime(Coordinate CurrentCoordinate, Coordinate newCoordinate);
     }
 }

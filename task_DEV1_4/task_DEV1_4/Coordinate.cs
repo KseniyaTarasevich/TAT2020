@@ -3,7 +3,7 @@
 namespace task_DEV1_4
 {
     /// <summary>
-    /// 
+    /// Struct Coordinate
     /// </summary>
     public struct Coordinate
     {
@@ -11,6 +11,23 @@ namespace task_DEV1_4
         private float _y;
         private float _z;
 
+        /// <summary>
+        /// Constructor for Coordinate
+        /// </summary>
+        /// <param x coordinate = "x"></param>
+        /// <param y coordinate = "y"></param>
+        /// <param z coordinate = "z"></param>
+        public Coordinate(float x, float y, float z)
+        {
+            this._x = x;
+            this._y = y;
+            this._z = z;
+
+            if (x < 0 || y < 0 || z < 0)
+            {
+                throw new ArgumentException("All coodinates components must be positive");
+            }
+        }
 
         public float X
         {
@@ -20,7 +37,6 @@ namespace task_DEV1_4
             }
             set
             {
-                CheckCoordinateValue(value);
                 _x = value;
             }
         }
@@ -33,7 +49,6 @@ namespace task_DEV1_4
             }
             set
             {
-                CheckCoordinateValue(value);
                 _y = value;
             }
         }
@@ -46,43 +61,15 @@ namespace task_DEV1_4
             }
             set
             {
-                CheckCoordinateValue(value);
                 _z = value;
             }
         }
 
         /// <summary>
-        /// 
+        /// Method for getting distance between two 3D coordinates
         /// </summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
-        /// <param name="z"></param>
-        public Coordinate(float x, float y, float z)
-        {
-            this._x = x;
-            this._y = y;
-            this._z = z;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
-        public float CheckCoordinateValue(float value)
-        {
-            if (value < 0)
-            {
-                throw new ArgumentException("All coodinates components must be positive");
-            }
-            return value;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="currentCoordinate"></param>
-        /// <param name="newCoordinate"></param>
+        /// <param Current coordinate = "currentCoordinate"></param>
+        /// <param New coordinate = "newCoordinate"></param>
         /// <returns></returns>
         public float GetDistanceBetweenPoints(Coordinate currentCoordinate, Coordinate newCoordinate)
         {

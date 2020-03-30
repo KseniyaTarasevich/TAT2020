@@ -4,19 +4,20 @@ namespace task_DEV1_4
 {
 
     /// <summary>
-    /// 
+    /// Class for definition of the Drone
     /// </summary>
-    class Drone : IFlyable
+   public class Drone : IFlyable
     {
         Coordinate CurrentCoordinate = new Coordinate();
 
         private const int _MAX_DRONE_DISTANCE = 1000;
         private float _droneVelocity = 1;
+
         /// <summary>
-        /// 
+        /// Constructor for Drone
         /// </summary>
-        /// <param name="droneCoordinate"></param>
-        /// <param name="droneVelocity"></param>
+        /// <param Coordinate of the drone = "droneCoordinate"></param>
+        /// <param Velocity of the drone = "droneVelocity"></param>
         public Drone(Coordinate droneCoordinate, float droneVelocity)
         {
             Velocity = droneVelocity;
@@ -36,28 +37,28 @@ namespace task_DEV1_4
         }
 
         /// <summary>
-        /// 
+        /// Method for flying to another coordinate
         /// </summary>
-        /// <param name="newCoordinate"></param>
+        /// <param New coordinate of the drone = "newCoordinate"></param>
         public void FlyTo(Coordinate newCoordinate)
         {
             CurrentCoordinate = newCoordinate;
         }
 
         /// <summary>
-        /// 
+        /// Method for getting flight time
         /// </summary>
-        /// <param name="CurrentCoordinate"></param>
-        /// <param name="newCoordinate"></param>
-        /// <returns></returns>
-        public float GetFlyTime(Coordinate CurrentCoordinate, Coordinate newCoordinate)
+        /// <param Current coordinate of the drone = "CurrentCoordinate"></param>
+        /// <param New coordinate of the drone = "newCoordinate"></param>
+        /// <returns>Flight time</returns>
+        public int GetFlyTime(Coordinate CurrentCoordinate, Coordinate newCoordinate)
         {
-            float droneTime = 0;
-            float droneFlyingTime = 0;
+            int droneTime = 0;
+            int droneFlyingTime = 0;
             var distance = CurrentCoordinate.GetDistanceBetweenPoints(CurrentCoordinate, newCoordinate);
             if (distance <= _MAX_DRONE_DISTANCE)
             {
-                droneTime = 60 * (distance / Velocity);
+                droneTime = (int)(60 * (distance / Velocity));
                 droneFlyingTime += droneTime + droneTime / 10;
             }
             else
