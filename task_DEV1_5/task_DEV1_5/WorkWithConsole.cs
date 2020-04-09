@@ -2,7 +2,6 @@
 
 namespace task_DEV1_5
 {
-
     /// <summary>
     /// Class for working with console
     /// </summary>
@@ -14,10 +13,10 @@ namespace task_DEV1_5
         private const string _COUNT_TYPES_COMMAND = "count types";
         private const string _EXIT_COMMAND = "exit";
 
-       /// <summary>
-       /// Method for display commands and answers
-       /// </summary>
-       public void WorkingWithConsole()
+        /// <summary>
+        /// Method for display commands and answers
+        /// </summary>
+        public void WorkingWithConsole()
         {
             bool exit = false;
 

@@ -31,9 +31,7 @@ namespace task_DEV1_5
             OneUnitCost = oneUnitCost;
         }
 
-
         public Car() { }
-
 
         public string Brand
         {
@@ -157,10 +155,10 @@ namespace task_DEV1_5
         }
 
         /// <summary>
-        /// 
+        /// Car list
         /// </summary>
-        /// <returns></returns>
-        public static IEnumerable<Car>  GetAllCars()
+        /// <returns>List of the cars</returns>
+        public static IEnumerable<Car> GetAllCars()
         {
             return new List<Car>   {
 

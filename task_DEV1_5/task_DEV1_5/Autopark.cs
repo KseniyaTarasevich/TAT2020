@@ -59,9 +59,8 @@ namespace task_DEV1_5
                 carCount += (int)car.Element("Quantity");
             }
 
-          //  Console.WriteLine("Count of all cars: " + carCount);
+            Console.WriteLine("Count of all cars: " + carCount);
         }
-
 
         /// <summary>
         /// Method that count average price of all cars
