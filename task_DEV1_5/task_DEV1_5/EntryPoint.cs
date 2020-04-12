@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Xml.Serialization;
-
-namespace task_DEV1_5
+﻿namespace task_DEV1_5
 {
     class EntryPoint
     {
