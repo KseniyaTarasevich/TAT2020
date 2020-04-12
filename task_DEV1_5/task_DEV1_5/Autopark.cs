@@ -13,20 +13,14 @@ namespace task_DEV1_5
     {
         static Autopark instance;
         static XDocument xmlDocument;
-
+     
         /// <summary>
         /// Constructor for Autopark
         /// </summary>
-        public Autopark()
+        private Autopark()
         {
             xmlDocument = new XDocument(new XDeclaration("1.0", "UTF-8", "yes"), new XElement("Cars"));
 
-        }
-        /// <summary>
-        /// Method that addes list of cars to XML-file
-        /// </summary>
-        public void AddCar()
-        {
             foreach (var item in Car.GetAllCars())
             {
                 xmlDocument.Root.Add(new XElement("Car", new XElement("Brand", item.Brand),

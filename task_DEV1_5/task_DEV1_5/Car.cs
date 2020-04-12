@@ -6,6 +6,7 @@ namespace task_DEV1_5
     /// <summary>
     /// Class that defines information about car
     /// </summary>
+
     public class Car
     {
         public string brand;
@@ -162,11 +163,12 @@ namespace task_DEV1_5
         {
             return new List<Car>   {
 
-       new Car {Brand = "opel", Model = "B45", Quantity = 2, OneUnitCost=4500 },
-       new Car {Brand ="audi",Model= "a90", Quantity =10, OneUnitCost=200},
-       new Car{Brand ="geely", Model="astra", Quantity =1, OneUnitCost = 8900},
-       new Car{Brand ="land rover", Model="landland", Quantity =1, OneUnitCost=41000}   };
-
+       new Car {Brand = "Opel", Model = "Senator", Quantity = 10, OneUnitCost = 15000},
+       new Car {Brand = "Audi", Model = "Q8", Quantity = 2, OneUnitCost = 160000},
+       new Car{Brand = "BMW", Model = "X4", Quantity = 1, OneUnitCost = 27000},
+       new Car{Brand = "Honda", Model= "Breeze", Quantity = 1, OneUnitCost = 22000},
+       new Car{Brand = "Audi", Model = "80", Quantity = 3, OneUnitCost = 9000}
+            };
         }
     }
 }

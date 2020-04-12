@@ -22,7 +22,7 @@ namespace task_DEV1_5
 
             while (!exit)
             {
-                Console.WriteLine("Available commands:\n" + "count types\n" + "count all\n" + "average price\n" + "average price type\n" + "exit\n");
+                Console.WriteLine("\nAvailable commands:\n" + "count types\n" + "count all\n" + "average price\n" + "average price type\n" + "exit\n");
 
                 string command = Console.ReadLine();
 
